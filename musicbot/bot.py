@@ -428,9 +428,10 @@ class MusicBot(discord.Client):
 
             if guild.id not in self.players:
                 if not create:
-                    raise exceptions.CommandError(
-                        'The bot is not in a voice channel.  '
-                        'Use %ssummon to summon it to your voice channel.' % self.config.command_prefix)
+                    # raise exceptions.CommandError(
+                    #     'The bot is not in a voice channel.  '
+                    #     'Use %ssummon to summon it to your voice channel.' % self.config.command_prefix)
+                    player.play()
 
                 voice_client = await self.get_voice_client(channel)
 
