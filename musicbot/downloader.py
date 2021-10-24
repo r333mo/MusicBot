@@ -2,7 +2,7 @@ import os
 import asyncio
 import logging
 import functools
-import youtube_dl
+import yt_dlp as youtube_dl
 
 from concurrent.futures import ThreadPoolExecutor
 
